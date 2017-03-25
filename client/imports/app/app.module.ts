@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {SettingsPageComponent} from './settings/settings-page.component';
+import {ProfilePageComponent} from './profile/profile-page.component';
 
 @NgModule({
   imports: [
@@ -10,7 +11,7 @@ import {SettingsPageComponent} from './settings/settings-page.component';
   ],
   declarations: [
     AppComponent,
-    SettingsPageComponent
+    ProfilePageComponent
   ],
   bootstrap: [
     AppComponent
