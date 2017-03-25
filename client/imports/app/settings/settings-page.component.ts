@@ -6,4 +6,19 @@ import template from './settings-page.component.html';
   selector: 'settings-page',
   template
 })
-export class SettingsPageComponent {}
+export class SettingsPageComponent {
+
+  user: Object;
+  constructor() {
+    this.user = {
+      'email': 'matthew.yamout@gmail.com',
+      'redid': '817870749'
+    };
+  }
+
+  test() {
+    const updatedEmail = (document.getElementById('emailForm') as HTMLElement).value;
+    this.user['email'] = updatedEmail;
+    (document.getElementById('emailForm') as HTMLElement).value = "";
+  }
+}
