@@ -16,9 +16,8 @@ export class SettingsPageComponent {
     };
   }
 
-  test() {
-    const updatedEmail = (document.getElementById('emailForm') as HTMLElement).value;
-    this.user['email'] = updatedEmail;
-    (document.getElementById('emailForm') as HTMLElement).value = "";
+  updateUserEmail() {
+    alert('allows for form to update user email and edit the local database');
   }
+
 }

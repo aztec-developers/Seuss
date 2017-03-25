@@ -11,6 +11,7 @@ import {ProfilePageComponent} from './profile/profile-page.component';
   ],
   declarations: [
     AppComponent,
+    SettingsPageComponent,
     ProfilePageComponent
   ],
   bootstrap: [
