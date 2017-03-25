@@ -3,6 +3,10 @@ import { Meteor } from 'meteor/meteor';
 import { Class } from '../imports/models';
 import { Observable } from 'rxjs';
 
+import { Users } from "../imports/collections/users";
+
+// Populating the database with some dummy data if there is no data. Just for
+// testing
 Meteor.startup(() => {
   if (Classes.find({}).cursor.count() === 0) {
 
@@ -31,4 +35,16 @@ Meteor.startup(() => {
     });
 
   }
+
+  if (Users.find({}).cursor.count() === 0) {
+
+    Users.collection.insert({
+      userName: 'John Smith',
+      userEmail: "john@smith.com",
+      isProfessor: false
+    });
+
+
+  }
+
 });
