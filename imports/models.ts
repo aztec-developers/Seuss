@@ -4,3 +4,9 @@ export interface Class {
   sectionNumber?: number;
   classOwner?: string;
 }
+
+export interface User {
+  _id?: string;
+  studentName?: string;
+  isProfessor?: boolean;
+}

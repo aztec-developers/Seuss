@@ -11,7 +11,6 @@ import { ClassesPageComponent } from './classes/classes-page.component';
   declarations: [
     AppComponent,
     ...ClassesPageComponent
-
   ],
   bootstrap: [
     AppComponent
