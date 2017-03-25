@@ -1,9 +1,6 @@
 <div>
   <ul>
-    <li *ngFor="let user of users | async">
-      userName: {{user.userName}}
-      <p>email: {{users.userEmail}}</p>
-      <p>isProfessor: {{users.isProfessor}}</p>
-    </li>
+    <a href="">Home</a>
+    <a [routerLink]="['/classes']" >Classes</a>
   </ul>
 </div>
