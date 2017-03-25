@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Classes } from '../../../../imports/collections';
+import { Class } from '../../../../imports/models';
+
 
 import template from './classes-page.component.html';
 
@@ -6,4 +10,11 @@ import template from './classes-page.component.html';
   selector: 'classes-page',
   template
 })
-export class ClassesPageComponent {}
+
+export class ClassesPageComponent {
+  classes: Observable<any[]>;
+
+  constructor() {
+    this.classes = Classes.find({}).zone();
+  }
+}

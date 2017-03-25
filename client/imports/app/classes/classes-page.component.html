@@ -1,3 +1,9 @@
 <div>
-  <h1>My classes</h1>
+  <ul>
+    <li *ngFor="let class of classes | async">
+      Class Name: {{class.className}}
+      <p>Section number: {{class.sectionNumber}}</p>
+      <p>Owner: {{class.classOwner}}</p>
+    </li>
+  </ul>
 </div>
