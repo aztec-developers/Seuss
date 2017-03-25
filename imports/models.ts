@@ -7,6 +7,7 @@ export interface Class {
 
 export interface User {
   _id?: string;
-  studentName?: string;
+  userName?: string;
+  userEmail?: string;
   isProfessor?: boolean;
 }
