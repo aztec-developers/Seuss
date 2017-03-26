@@ -1,0 +1,11 @@
+<a [routerLink]="['']" >Home</a>
+<a [routerLink]="['/classes']" >Classes</a>
+<a [routerLink]="['/checkin']" >Checkin</a>
+
+<h1>
+  This page will load the sub component based on what usertype
+  is logged ins
+</h1>
+
+<professor-checkin></professor-checkin>
+<student-checkin></student-checkin>

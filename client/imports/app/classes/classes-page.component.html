@@ -1,1 +1,25 @@
-This is the classes page
+<a href="">Home</a>
+<a [routerLink]="['/classes']" >Classes</a>
+<a [routerLink]="['/checkin']" >Checkin</a>
+
+<div>
+  <h1> LIST OF CLASSES</h1>
+  <ul>
+    <li *ngFor="let class of classes | async">
+      Class Name: {{class.className}}
+      <p>Section number: {{class.sectionNumber}}</p>
+      <p>Owner: {{class.classOwner}}</p>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h1>LIST OF USERS</h1>
+  <ul>
+    <li *ngFor="let user of users | async">
+      userName: {{user.userName}}
+      <p>email: {{user.userEmail}}</p>
+      <p>isProfessor: {{user.isProfessor}}</p>
+    </li>
+  </ul>
+</div>
