@@ -8,7 +8,7 @@ import { Class } from '../../../../imports/models';
 
 // Importing user collection and interface
 import { User } from '../../../../imports/models';
-import { Users } from '../../../../imports/collections/users';
+import { Users2 } from '../../../../imports/collections/users2';
 
 
 import template from './classes-page.component.html';
