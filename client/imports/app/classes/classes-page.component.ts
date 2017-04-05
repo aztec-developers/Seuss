@@ -29,7 +29,7 @@ export class ClassesPageComponent {
       // Match redID with their classes
     }).zone();
 
-    this.users = Users.find({
+    this.users = Users2.find({
       // Logic goes here
       // Match redID with their classes
     }).zone();

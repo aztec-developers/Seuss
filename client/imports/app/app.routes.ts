@@ -10,11 +10,11 @@ import { ManageClasses } from './manage/manage-classes.component';
 import { ProfilePageComponent } from './profile/profile-page.component';
 
 export const routes: Route[] = [
-  { path: '', component: LoginPageComponent },
+  { path: '', component: LoginPageComponent  },
   { path: 'classes', component: ClassesPageComponent, canActivate: ['canActivateForLoggedIn'] },
-  { path: 'checkin', component: CheckinPageComponent },
-  { path: 'manage', component: ManageClasses },
-  { path: 'profile', component: ProfilePageComponent }
+  { path: 'checkin', component: CheckinPageComponent, canActivate: ['canActivateForLoggedIn']  },
+  { path: 'manage', component: ManageClasses, canActivate: ['canActivateForLoggedIn']  },
+  { path: 'profile', component: ProfilePageComponent, canActivate: ['canActivateForLoggedIn']  }
 ];
 
 export const ROUTES_PROVIDERS = [{
