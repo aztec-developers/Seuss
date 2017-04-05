@@ -1,3 +1,3 @@
 
 export * from './classes';
-export * from './users';
+export * from './users2';
