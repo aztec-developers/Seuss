@@ -1,19 +1,45 @@
-<a [routerLink]="['']" >Home</a>
-<a [routerLink]="['/profile']"> Profile </a>
-<a [routerLink]="['/classes']" >Classes</a>
-<a [routerLink]="['/checkin']" >Checkin</a>
-<a [routerLink]="['/manage']" >Manage</a>
+
+
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-pills">
+      <li role="presentation"> <a [routerLink]="['']"> Home </a> </li>
+      <li role="presentation" class="active"> <a [routerLink]="['/profile']"> Profile </a> </li>
+      <li role="presentation"> <a [routerLink]="['/classes']"> Classes </a> </li>
+      <li role="presentation"> <a [routerLink]="['/checkin']"> Checkin </a> </li>
+      <li role="presentation"> <a [routerLink]="['/manage']"> Manage </a> </li>
+    </ul>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
     <div class="col col-md-12">
-      <div class="jumbotron">
-        <h2> {{user.name}} </h2>
-        <h3> Email: {{user.email}} </h3>
-        <h3> RedID: {{user.redid}} </h3>
-        <button type="button" class="btn btn-primary" (click)="manageClasses()"> Manage Classes </button>
-        <button type="button" class="btn btn-primary" (click)="userSettings()"> User Settings </button>
+      <div class="page-header">
+        <h2> {{user.name}} <small> RedID: {{user.redid}} </small> </h2>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-12">
+      <div class="page-header">
+        <h3> Active Classes </h3>
+      </div>
+      <ul>
+        <li> CS 108 </li>
+        <li> CS 237 </li>
+        <li> RWS 200 </li>
+        <li> Math 245 </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-12">
+      <div class="page-header">
+        <h3> Options </h3>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="manageClasses()"> Manage Classes</button>
+      <button type="button" class="btn btn-primary" (click)="userSettings()"> User Settings </button>
     </div>
   </div>
 </div>

@@ -15,14 +15,11 @@ export class ProfilePageComponent {
       'email': 'john.smith@gmail.com',
       'redid': '12345678'
     };
-
+    this.loadUser();
   }
-  /*
-    Runs method before rendering the component. We should use this method to load data from the database
-    to our component objects before rendering.
-  */
-  ngOnInit() {
-    //load users info from the local mongo database
+
+  loadUser() {
+    console.log('constructor -> test function');
   }
 
   manageClasses() {

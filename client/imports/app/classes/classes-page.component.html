@@ -1,8 +1,12 @@
-<a [routerLink]="['']" >Home</a>
-<a [routerLink]="['/profile']"> Profile </a>
-<a [routerLink]="['/classes']" >Classes</a>
-<a [routerLink]="['/checkin']" >Checkin</a>
-<a [routerLink]="['/manage']" >Manage</a>
+<div class="container">
+  <ul class="nav nav-pills">
+    <li role="presentation"> <a [routerLink]="['']"> Home </a> </li>
+    <li role="presentation"> <a [routerLink]="['/profile']"> Profile </a> </li>
+    <li role="presentation" class="active"> <a [routerLink]="['/classes']"> Classes </a> </li>
+    <li role="presentation"> <a [routerLink]="['/checkin']"> Checkin </a> </li>
+    <li role="presentation"> <a [routerLink]="['/manage']"> Manage </a> </li>
+  </ul>
+</div>
 
 <div>
   <h1> LIST OF CLASSES</h1>
