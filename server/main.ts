@@ -43,8 +43,5 @@ Meteor.startup(() => {
       userEmail: "john@smith.com",
       isProfessor: false
     });
-
-
   }
-
 });

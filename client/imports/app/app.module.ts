@@ -43,4 +43,5 @@ import { ProfessorPageComponent } from './checkin/professor/checkin-professor.co
     AppComponent
   ]
 })
+
 export class AppModule {}
