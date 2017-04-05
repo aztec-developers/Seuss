@@ -12,7 +12,7 @@ export const Classes = new MongoObservable.Collection<Class>('classes');
 function loggedIn() {
   return !!Meteor.user();
 }
- 
+
 Classes.allow({
   insert: loggedIn,
   update: loggedIn,
