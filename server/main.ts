@@ -31,7 +31,7 @@ Meteor.startup(() => {
     Classes.collection.insert({
       className: 'CS 108',
       sectionNumber: 2,
-      classOwner: 'Ivan Bajic'
+      classOwner: 'Ivan Bajics'
     });
 
   }
@@ -41,7 +41,22 @@ Meteor.startup(() => {
     Users.collection.insert({
       userName: 'John Smith',
       userEmail: "john@smith.com",
-      isProfessor: false
+      isProfessor: false,
+      redID: 8180000002
+    });
+
+    Users.collection.insert({
+      userName: 'Nimish Saxena',
+      userEmail: "whatevenisrocketleague@gmail.no",
+      isProfessor: false,
+      redID: 8180000002
+    });
+
+    Users.collection.insert({
+      userName: 'David Arce',
+      userEmail: "ithinkimgoodatrocketleaguef@gmail.no",
+      isProfessor: false,
+      redID: 8180000001
     });
 
 

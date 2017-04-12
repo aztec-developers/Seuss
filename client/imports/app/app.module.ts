@@ -13,6 +13,9 @@ import {ProfilePageComponent} from './profile/profile-page.component';
 import {ManageClasses} from './manage/manage-classes.component';
 import {ManageProfessor} from './manage/professor/manage-professor.component';
 import {ManageStudent} from './manage/student/manage-student.component';
+
+import {TempFormComponent} from './manage/temp-form.component';
+
 import { ClassesPageComponent } from './classes/classes-page.component';
 import { LoginPageComponent } from './login/login-page.component';
 
@@ -25,6 +28,7 @@ import { ProfessorPageComponent } from './checkin/professor/checkin-professor.co
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   declarations: [
@@ -37,7 +41,8 @@ import { ProfessorPageComponent } from './checkin/professor/checkin-professor.co
     LoginPageComponent,
     CheckinPageComponent,
     StudentPageComponent,
-    ProfessorPageComponent
+    ProfessorPageComponent,
+      TempFormComponent,
   ],
   bootstrap: [
     AppComponent
