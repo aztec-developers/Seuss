@@ -1,9 +1,16 @@
 // Libraries
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { routes } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+// Importing for doing login-page
+import { AccountsModule } from 'angular2-meteor-accounts-ui';
+
+// Using this for loggin and routing
+import { routes, ROUTES_PROVIDERS } from './app.routes';
+
+
 // ---- End libraries ---
 
 // Components
@@ -28,8 +35,12 @@ import { ProfessorPageComponent } from './checkin/professor/checkin-professor.co
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+
     FormsModule,
     RouterModule.forRoot(routes)
+
+    AccountsModule
+
   ],
   declarations: [
     AppComponent,
@@ -44,8 +55,12 @@ import { ProfessorPageComponent } from './checkin/professor/checkin-professor.co
     ProfessorPageComponent,
       TempFormComponent,
   ],
+  providers: [
+  ...ROUTES_PROVIDERS
+  ],
   bootstrap: [
     AppComponent
   ]
 })
+
 export class AppModule {}

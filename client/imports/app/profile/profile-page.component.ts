@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import template from './profile-page.component.html';
-import {Users} from '../../../../both/collections/users.collection';
+import { Users2 } from '../../../../imports/collections/users2';
 
 @Component({
   selector: 'profile-page',

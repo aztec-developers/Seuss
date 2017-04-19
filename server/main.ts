@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Class } from '../imports/models';
 import { Observable } from 'rxjs';
 
-import { Users } from "../imports/collections/users";
+import { Users2 } from "../imports/collections/users2";
 
 // Populating the database with some dummy data if there is no data. Just for
 // testing
@@ -36,9 +36,9 @@ Meteor.startup(() => {
 
   }
 
-  if (Users.find({}).cursor.count() === 0) {
+  if (Users2.find({}).cursor.count() === 0) {
 
-    Users.collection.insert({
+    Users2.collection.insert({
       userName: 'John Smith',
       userEmail: "john@smith.com",
       isProfessor: false,
@@ -58,8 +58,5 @@ Meteor.startup(() => {
       isProfessor: false,
       redID: 8180000001
     });
-
-
   }
-
 });
