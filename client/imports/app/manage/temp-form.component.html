@@ -1,0 +1,78 @@
+<form [formGroup]="addForm" (ngSubmit)="addClass()">
+  <label>Name</label>
+  <input type="text" formControlName="className">
+
+  <label>sectionNumber</label>
+  <input type="text" formControlName="sectionNumber">
+
+  <label>Owner</label>
+  <input type="text" formControlName="classOwner">
+
+  <label>classTime</label>
+  <select name="times" formControlName="classTime">
+  <option value="08:00">08:00</option>
+  <option value="09:00">09:00</option>
+  <option value="10:00">10:00</option>
+  <option value="11:00">11:00</option>
+  <option value="12:00">12:00</option>
+  <option value="13:00">13:00</option>
+  <option value="14:00">14:00</option>
+</select>
+
+  <label>classDays</label>
+  <input type='text' formControlName="classDays">
+
+  <label>Check In Start Time</label>
+  <select name="times" formControlName="classCheckInStartTime">
+  <option value="08:00">08:00</option>
+  <option value="09:00">09:00</option>
+  <option value="10:00">10:00</option>
+  <option value="11:00">11:00</option>
+  <option value="12:00">12:00</option>
+  <option value="13:00">13:00</option>
+  <option value="14:00">14:00</option>
+</select>
+
+<label>Check In End Time</label>
+<select name="times" formControlName="classCheckInEndTime">
+<option value="08:00">08:00</option>
+<option value="09:00">09:00</option>
+<option value="10:00">10:00</option>
+<option value="11:00">11:00</option>
+<option value="12:00">12:00</option>
+<option value="13:00">13:00</option>
+<option value="14:00">14:00</option>
+</select>
+<!--
+  <input type="checkbox" formControlName="classDays" value="Bike"> I have a bike<br>
+  <input type="checkbox" formControlName="classDays" value="Car"> I have a car<br> -->
+
+  <!-- <div class="form-group">
+      <label>Gender</label>
+      <div class="radio" *ngFor="let classDay of classDays">
+        <label>
+          <input type="radio" name="classDays" [(ngModel)]="user.classDays" [value]="classDays.value" formControlName="classDays">
+          {{classDays.display}}
+        </label>
+      </div>
+    </div> -->
+
+
+
+    <!-- <div class="form-group">
+        <label>Gender</label>
+        <div class="radio" formControlName="classDays">
+          <label>
+            <input type="checkbox" name="classDays" value="M">
+            {{classDays[0].display}}
+          </label>
+          <label>
+            <input type="checkbox" name="classDays" value="T">
+            {{classDays[1].display}}
+          </label>
+        </div>
+      </div> -->
+
+
+  <button type="submit">Add</button>
+</form>

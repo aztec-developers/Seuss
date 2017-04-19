@@ -4,5 +4,35 @@
 <a [routerLink]="['/manage']" >Manage</a>
 <a [routerLink]="['/profile']" >Profile</a>
 
-<manage-professor></manage-professor>
-<manage-student></manage-student>
+<!-- <manage-professor></manage-professor>
+<manage-student></manage-student> -->
+
+<temp-form></temp-form>
+
+
+
+<div>
+  <h1> LIST OF CLASSES</h1>
+  <ul>
+    <li *ngFor="let class of classes | async">
+       <button (click)="removeClass(class)">X</button>
+      {{class.sectionNumber}} {{class.className}} with {{class.classOwner}} on {{class.classDays}} at {{class.classTime}}. Check in time is from {{class.classCheckInStartTime}} to {{class.classCheckInEndTime}}.
+      <a [routerLink]="['/class', class._id]">EDIT</a>
+      <!-- <p>Section number: {{class.sectionNumber}}</p>
+      <p>Owner: {{class.classOwner}}</p> -->
+      <!-- <p> {{class.sectionNumber.}} {{class.className}} {{class.classOwner.}} on {{class.classDays}} at {{class.classTime}} </p> -->
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h1>LIST OF USERS</h1>
+  <ul>
+    <li *ngFor="let user of users | async">
+      <!-- <button (click)="removeUser(user)">X</button> -->
+      {{user.userName}} : {{user.redID}} - {{user.userEmail}}
+      <!-- <p>email: {{user.userEmail}}</p>
+      <p>isProfessor: {{user.isProfessor}}</p> -->
+    </li>
+  </ul>
+</div>

@@ -4,4 +4,13 @@
       <h2>Manage Classes For Student</h2>
     </div>
   </div>
+
+  <header *ngIf="class">
+  <h2>{{class.className}}</h2>
+
+  <p>{{class.classId}}</p>
+
+  <p>{{class.classTime}}</p>
+</header>
+
 </div>
